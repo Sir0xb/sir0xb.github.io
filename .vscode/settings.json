@@ -6,7 +6,7 @@
 
 	"editor.fontSize": 16,
 
-	"typescript.validate.enable": false,
+	"typescript.validate.enable": true,
 
 	// 自动去掉分号
 	"prettier.semi": false,
@@ -20,10 +20,8 @@
 	"prettier.arrowParens": "avoid",
 
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"htmlhint.options": { "doctype-first": false },
 
-	// "[python, typescript, javascript, vue, react, html, json]": {
-	// 	"editor.defaultFormatter": "esbenp.prettier-vscode"
-	// },
 	"git.ignoreLimitWarning": true,
 
 	"editor.codeActionsOnSave": {
