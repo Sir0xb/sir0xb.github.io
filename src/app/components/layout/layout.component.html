@@ -1,1 +1,14 @@
-<section class="layout-container"></section>
+<section class="layout-container">
+	<div class="header">
+		<article slot="header"></article>
+	</div>
+	<div class="menuBar">
+		<article #menuBar slot></article>
+	</div>
+	<div class="content">
+		<ng-content></ng-content>
+	</div>
+	<div class="footer">
+		<article #footer slot></article>
+	</div>
+</section>

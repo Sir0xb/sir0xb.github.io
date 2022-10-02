@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<select name="theme" [(ngModel)]="theme">
+	<option *ngFor="let theme of themes" [ngValue]="theme">{{ theme }}</option>
+</select>
+<div [ngClass]="theme">
+	<router-outlet></router-outlet>
+</div>

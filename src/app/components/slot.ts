@@ -1,4 +1,11 @@
-import { Type } from '@angular/core';
+import { Directive, Type, ViewContainerRef } from '@angular/core';
+
+@Directive({
+	selector: '[slot]'
+})
+export class SlotDirective {
+	constructor(public viewContainerRef: ViewContainerRef) {}
+}
 
 export class Slot {
 	constructor(
