@@ -1,0 +1,32 @@
+{
+	// 缩进设置为 Tab
+	"editor.tabSize": 3,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+
+	"editor.fontSize": 16,
+
+	"typescript.validate.enable": false,
+
+	// 自动去掉分号
+	"prettier.semi": false,
+
+	// 自动使用单引号
+	"prettier.singleQuote": true,
+
+	"typescript.tsdk": "node_modules/typescript/lib",
+
+	// 参数括号
+	"prettier.arrowParens": "avoid",
+
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	// "[python, typescript, javascript, vue, react, html, json]": {
+	// 	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	// },
+	"git.ignoreLimitWarning": true,
+
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	}
+}
