@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomReactComponentWrapper } from './components/CustomReactComponentWrapper';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -20,7 +21,8 @@ import { UnknowComponent } from './pages/unknow/unknow.component';
 		FooterComponent,
 		MenubarComponent,
 		MainComponent,
-		UnknowComponent
+		UnknowComponent,
+		CustomReactComponentWrapper
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule],
 	providers: [],

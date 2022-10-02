@@ -22,6 +22,10 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"htmlhint.options": { "doctype-first": false },
 
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
 	"git.ignoreLimitWarning": true,
 
 	"editor.codeActionsOnSave": {

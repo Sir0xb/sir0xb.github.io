@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenubarComponent } from 'src/app/components/menubar/menubar.component';
-// import { MenubarComponent } from 'src/app/components/menubar/menubar.component';
 import { Slot, SlotPosition } from 'src/app/components/slot';
+import TestReactComponent, {
+	TestReactComponentNew
+} from 'src/app/components/TestReactComponent';
 import { FooterComponent } from './../../components/footer/footer.component';
 import { HeaderComponent } from './../../components/header/header.component';
 
@@ -11,6 +13,9 @@ import { HeaderComponent } from './../../components/header/header.component';
 	styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+	public component1 = TestReactComponent;
+	public component2 = TestReactComponentNew;
+
 	slots = [
 		new Slot(HeaderComponent, SlotPosition.header),
 		new Slot(MenubarComponent, SlotPosition.menuBar),
