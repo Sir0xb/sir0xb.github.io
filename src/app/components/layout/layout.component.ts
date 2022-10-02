@@ -23,17 +23,20 @@ export class LayoutComponent implements OnInit, AfterViewInit {
 	ngOnInit(): void {}
 
 	ngAfterViewInit(): void {
-		console.log('xx', this.slotRefs);
 		this.loadComponent();
 	}
 
 	loadComponent() {
 		this.slotRefs.forEach((query, index) => {
-			const slot = this.slots[index];
 			const slotRef = query.viewContainerRef;
-			slotRef.clear();
-			const compRef = slotRef.createComponent<Slot>(slot.component);
-			compRef.instance.data = slot.data;
+			const slotType = slotRef.element.nativeElement.getAttribute('slot');
+			const slot = this.slots.find(slot => slot.position === slotType);
+
+			if (slot) {
+				slotRef.clear();
+				const compRef = slotRef.createComponent<Slot>(slot.component);
+				compRef.instance.data = slot.data;
+			}
 		});
 	}
 }

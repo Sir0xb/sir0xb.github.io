@@ -9,5 +9,5 @@ export class AppComponent {
 	title = 'boliblog';
 
 	theme: string = 'test';
-	themes: string[] = ['test', 'normal'];
+	themes: string[] = ['test', 'normal', 'yo'];
 }

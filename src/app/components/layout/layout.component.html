@@ -1,14 +1,8 @@
 <section class="layout-container">
-	<div class="header">
-		<article slot="header"></article>
-	</div>
-	<div class="menuBar">
-		<article #menuBar slot></article>
-	</div>
+	<ng-container *ngFor="let slot of slots">
+		<article [slot]="slot.position"></article>
+	</ng-container>
 	<div class="content">
 		<ng-content></ng-content>
-	</div>
-	<div class="footer">
-		<article #footer slot></article>
 	</div>
 </section>

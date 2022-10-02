@@ -1,36 +1,43 @@
-.header {
-	background-color: red;
-	grid-area: hd;
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
-.menuBar {
-	background-color: blue;
-	grid-area: mb;
-}
-.content {
-	grid-area: ct;
-}
-.footer {
-	background-color: yellow;
-	grid-area: ft;
-}
+.layout-container {
+	min-height: calc(100vh - 30px);
+	display: grid;
 
-// .header {
-//    grid-area: hd;
-// }
-// .footer {
-//    grid-area: ft;
-// }
-// .content {
-//    grid-area: main;
-// }
-// .sidebar {
-//    grid-area: sd;
-// }
+	article {
+		display: none;
+	}
+	.header {
+		background-color: red;
+		grid-area: hd;
+	}
+	.menuBar {
+		background-color: blue;
+		grid-area: mb;
+	}
+	.content {
+		grid-area: ct;
+	}
+	.footer {
+		background-color: yellow;
+		grid-area: ft;
+	}
+}
+.test {
+	.layout-container {
+		grid-template-columns: 200px auto;
+		grid-template-rows: 100px 1fr 100px;
+		grid-template-areas:
+			'hd hd'
+			'mb ct'
+			'ft ft';
+	}
+}
 .normal {
 	.layout-container {
-		display: grid;
-		grid-template-columns: 100vw;
-		// grid-template-rows: 100px 100px 100px;
 		grid-template-areas:
 			'hd'
 			'mb'
@@ -38,46 +45,14 @@
 			'ft';
 	}
 }
-.test {
+.yo {
 	.layout-container {
-		display: grid;
-		// grid-template-columns: 30vw 70vw;
-		// grid-template-rows: ;
-		// grid-template-columns: repeat(2, 1fr);
-		// grid-template-rows: 50px 350px 50px;
+		.menuBar {
+			display: none;
+		}
 		grid-template-areas:
 			'hd hd'
-			'mb ct'
+			'ct ct'
 			'ft ft';
 	}
 }
-// :host-context(.test) {
-// 	background: red;
-// }
-// :host-context(.nomal) {
-// 	background: blue;
-// }
-// :host(.test) {
-// 	background: blue;
-// }
-
-// ::ng-deep {
-// 	.test {
-// 		background: pink;
-// 	}
-// }
-
-// :host-context(.test) {
-// 	background-color: red;
-// 	.layout-container {
-// 		background-color: blue;
-// 	}
-// }
-
-// ::ng-deep .test {
-// 	background: gray;
-// }
-
-// :host ::ng-deep .test {
-// 	background: yellow;
-// }
