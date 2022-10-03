@@ -17,8 +17,8 @@ export class MainComponent implements OnInit {
 	public component2 = TestReactComponentNew;
 
 	slots = [
-		new Slot(HeaderComponent, SlotPosition.header),
 		new Slot(MenubarComponent, SlotPosition.menuBar),
+		new Slot(HeaderComponent, SlotPosition.header),
 		new Slot(FooterComponent, SlotPosition.footer)
 	];
 

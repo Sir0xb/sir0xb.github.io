@@ -1,4 +1,21 @@
-@import './variables.scss';
+@font-face {
+	font-family: 'AIAIAI';
+	src: url(./assets/fonts/AIAIAIv4-Light.woff2) format('woff2');
+}
+
+$colors: #25272d, #3c3e44, #55565b, #6f7075, #8a8b8f, #a6a7aa, #c3c3c5, #e0e1e2,
+	#ffffff;
+
+@function lighter($deep: 100, $percent: 100) {
+	@return rgba(nth($colors, $deep / 100), $percent);
+}
+
+@mixin flexPosition($x: center, $y: center) {
+	display: flex;
+	justify-content: $x;
+	align-items: $y;
+}
+
 html,
 body {
 	margin: 0;
@@ -14,7 +31,7 @@ body {
 		flex-direction: column;
 
 		.header {
-			height: 250px;
+			height: 300px;
 			background-color: lighter(900);
 			grid-area: hd;
 			overflow: hidden;
@@ -23,8 +40,8 @@ body {
 			grid-area: mb;
 
 			height: 4rem;
-			color: lighter(100);
-			background-color: lighter(800);
+			color: lighter(100, 70%);
+			background-color: lighter(800, 70%);
 			font-size: 1rem;
 			overflow: hidden;
 
@@ -47,20 +64,23 @@ body {
 				cursor: pointer;
 				&:hover {
 					color: lighter(800);
-					background-color: lighter(100);
+					background-color: lighter(100, 50%);
 				}
 				&.current {
 					color: lighter(800);
-					background-color: lighter(100);
+					background-color: lighter(100, 80%);
 				}
 			}
 		}
 		.content {
-			grid-area: ct;
+			min-height: 600px;
 		}
 		.footer {
-			background-color: yellow;
-			grid-area: ft;
+			@include flexPosition(space-between);
+			color: lighter(100, 70%);
+			height: 6rem;
+			padding: 0 2rem;
+			background-color: lighter(100, 5%);
 		}
 	}
 
@@ -69,7 +89,7 @@ body {
 		background-image: url(assets/images/dribbble.gif);
 		background-repeat: no-repeat;
 		background-position: center;
-		color: rgba(0, 0, 0, 0.7);
+		color: lighter(100, 0.7);
 		font-weight: 700;
 		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -81,7 +101,7 @@ body {
 			font-size: 7rem;
 		}
 		.gap {
-			height: 16rem;
+			height: 18rem;
 		}
 		.desc1 {
 			margin: 1.45rem;
@@ -94,9 +114,9 @@ body {
 		.back {
 			padding: 0.8rem 1.5rem;
 			border-radius: 0.5rem;
-			border: solid 1px rgba(0, 0, 0, 0.06);
+			border: solid 1px lighter(100, 6.5%);
 			&:hover {
-				border: solid 1px rgba(0, 0, 0, 0.3);
+				border: solid 1px lighter(100, 30%);
 			}
 			cursor: pointer;
 		}
