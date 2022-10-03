@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { appConfig } from 'src/app.config';
+import { APP_CONFIG } from 'src/app/app.config.injection';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomReactComponentWrapper } from './components/CustomReactComponentWrapper';
@@ -25,7 +27,7 @@ import { UnknowComponent } from './pages/unknow/unknow.component';
 		CustomReactComponentWrapper
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule],
-	providers: [],
+	providers: [{ provide: APP_CONFIG, useValue: appConfig }],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

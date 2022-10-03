@@ -8,8 +8,7 @@ import {
 	ViewEncapsulation
 } from '@angular/core';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom/client';
+import { createRoot, Root } from 'react-dom/client';
 
 @Component({
 	selector: 'custom-react',
@@ -17,6 +16,7 @@ import { createRoot } from 'react-dom/client';
 	encapsulation: ViewEncapsulation.ShadowDom
 })
 export class CustomReactComponentWrapper implements OnChanges, OnDestroy {
+	root?: Root;
 	@Input() component: any;
 	@ViewChild('customReact', { static: true }) containerRef!: ElementRef;
 
@@ -25,12 +25,12 @@ export class CustomReactComponentWrapper implements OnChanges, OnDestroy {
 	}
 
 	ngOnDestroy(): void {
-		ReactDOM.unmountComponentAtNode(this.containerRef.nativeElement);
+		this.root && this.root.unmount();
 	}
 
 	render() {
-		const root = createRoot(this.containerRef.nativeElement);
-		root.render(
+		this.root = createRoot(this.containerRef.nativeElement);
+		this.root.render(
 			<React.StrictMode>
 				<this.component />
 			</React.StrictMode>
