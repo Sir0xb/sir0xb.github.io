@@ -1,7 +1,7 @@
 <article class="logo" *ngIf="logo && logo.enable">
 	<img
-		[src]="logo.url || logo.path || 'assets/images/logo.png'"
 		alt="logo"
+		[src]="logo.url || logo.path || 'assets/images/logo.png'"
 		[style.width]="logo.width || logo.size || 'auto'"
 		[style.height]="logo.height || logo.size || 'auto'"
 		(error)="handleMissingImage($event)" />

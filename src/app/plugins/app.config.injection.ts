@@ -1,6 +1,7 @@
 import { InjectionToken, Type } from '@angular/core';
 
 export interface AppConfig {
+	header?: string | boolean;
 	siteName?: string;
 	logo?: {
 		enable: boolean;

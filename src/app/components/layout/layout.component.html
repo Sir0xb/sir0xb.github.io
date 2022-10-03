@@ -1,9 +1,13 @@
 <section class="layout-container">
 	<article
 		[slot]="slot.position"
-		*ngFor="let slot of slots"
+		*ngFor="let slot of upSlots"
 		style="display: none"></article>
 	<div class="content">
 		<ng-content></ng-content>
 	</div>
+	<article
+		[slot]="slot.position"
+		*ngFor="let slot of downSlots"
+		style="display: none"></article>
 </section>

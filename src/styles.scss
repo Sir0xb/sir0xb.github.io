@@ -12,11 +12,14 @@ body {
 	font-family: AIAIAI;
 	.layout-container {
 		min-height: 100vh;
-		display: grid;
+		display: flex;
+		flex-direction: column;
 
 		.header {
-			background-color: leighter(900);
+			height: 250px;
+			background-color: lighter(900);
 			grid-area: hd;
+			overflow: hidden;
 		}
 		.menubar {
 			grid-area: mb;
@@ -62,10 +65,5 @@ body {
 			background-color: yellow;
 			grid-area: ft;
 		}
-		grid-template-areas:
-			'hd'
-			'mb'
-			'ct'
-			'ft';
 	}
 }

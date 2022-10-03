@@ -1,7 +1,8 @@
-import { AppConfig } from './app/app.config.injection';
 import { MainComponent } from './app/pages/main/main.component';
+import { AppConfig } from './app/plugins/app.config.injection';
 
 export const appConfig: AppConfig = {
+	header: true,
 	// siteName: 'Boliball',
 	/*
 		enable:

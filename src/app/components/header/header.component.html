@@ -1,1 +1,4 @@
-<div>header</div>
+<img
+	alt="header"
+	[src]="path || 'assets/images/header.jpg'"
+	(error)="handleMissingImage($event)" />

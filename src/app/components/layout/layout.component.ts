@@ -5,6 +5,7 @@ import {
 	QueryList,
 	ViewChildren
 } from '@angular/core';
+import { SlotPosition } from 'src/app/components/slot';
 import { Slot, SlotDirective } from '../slot';
 
 @Component({
@@ -14,12 +15,19 @@ import { Slot, SlotDirective } from '../slot';
 })
 export class LayoutComponent implements OnInit {
 	@Input() slots: Slot[] = [];
-
 	@ViewChildren(SlotDirective) slotRefs!: QueryList<SlotDirective>;
+
+	upSlots: Slot[] = [];
+	downSlots: Slot[] = [];
 
 	constructor() {}
 
 	ngOnInit(): void {
+		this.upSlots = this.slots.filter(
+			(slot: Slot) =>
+				slot.position !== SlotPosition.footer ||
+				(this.downSlots.push(slot) && void 0)
+		);
 		setTimeout(() => {
 			this.loadComponent();
 		}, 100);
