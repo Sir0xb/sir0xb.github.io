@@ -7,6 +7,10 @@
 		(error)="handleMissingImage($event)" />
 </article>
 <article class="site-name" *ngIf="siteName">{{ siteName }}</article>
-<article class="menu-item" *ngFor="let m of menu">
-	<a [routerLink]="['/' + m.link]">{{ m.name }}</a>
+<article
+	class="menu-item"
+	*ngFor="let m of menu"
+	[class.current]="'/' + m.link === currentMenuPath"
+	[routerLink]="['/' + m.link]">
+	{{ m.name }}
 </article>

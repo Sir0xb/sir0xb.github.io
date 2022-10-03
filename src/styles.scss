@@ -3,13 +3,11 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	a {
-		text-decoration: none;
-	}
 	background-color: lighter(900);
 }
 [theme='normal'] {
 	font-family: AIAIAI;
+
 	.layout-container {
 		min-height: 100vh;
 		display: flex;
@@ -46,14 +44,13 @@ body {
 				height: 100%;
 				margin: 1rem 0;
 				padding: 0 1.5rem;
-				a {
-					color: lighter(100);
-				}
+				cursor: pointer;
 				&:hover {
 					color: lighter(800);
-					a {
-						color: lighter(800);
-					}
+					background-color: lighter(100);
+				}
+				&.current {
+					color: lighter(800);
 					background-color: lighter(100);
 				}
 			}
@@ -64,6 +61,44 @@ body {
 		.footer {
 			background-color: yellow;
 			grid-area: ft;
+		}
+	}
+
+	.unknow {
+		height: 100vh;
+		background-image: url(assets/images/dribbble.gif);
+		background-repeat: no-repeat;
+		background-position: center;
+		color: rgba(0, 0, 0, 0.7);
+		font-weight: 700;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+		@include flexPosition();
+		flex-direction: column;
+
+		.title {
+			font-size: 7rem;
+		}
+		.gap {
+			height: 16rem;
+		}
+		.desc1 {
+			margin: 1.45rem;
+			font-size: 2rem;
+		}
+		.desc2 {
+			margin-bottom: 1.4rem;
+			font-size: 1.25rem;
+		}
+		.back {
+			padding: 0.8rem 1.5rem;
+			border-radius: 0.5rem;
+			border: solid 1px rgba(0, 0, 0, 0.06);
+			&:hover {
+				border: solid 1px rgba(0, 0, 0, 0.3);
+			}
+			cursor: pointer;
 		}
 	}
 }

@@ -4,12 +4,11 @@ import { appConfig } from 'src/app.config';
 import { UnknowComponent } from './pages/unknow/unknow.component';
 
 const routes: Routes = [
-	{ path: '', component: appConfig.menu[0].page },
-	...appConfig.menu.map((menu, index) => {
+	{ path: '', redirectTo: appConfig.menu[0].link, pathMatch: 'full' },
+	...appConfig.menu.map(menu => {
 		return {
 			path: menu.link,
-			component: menu.page,
-			redirectTo: index === 0 ? '' : undefined
+			component: menu.page
 		};
 	}),
 	{ path: '**', component: UnknowComponent }

@@ -24,7 +24,7 @@ export const appConfig: AppConfig = {
 	menu: [
 		{ name: 'Home', link: 'home', page: MainComponent },
 		{ name: 'Programing', link: 'programing', page: MainComponent },
-		{ name: '404s', link: '404s', page: MainComponent },
+		{ name: '404', link: '404s', page: MainComponent },
 		{ name: 'Music', link: 'music', page: MainComponent }
 	]
 };
