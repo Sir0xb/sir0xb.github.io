@@ -9,6 +9,7 @@ import { CustomReactComponentWrapper } from './components/CustomReactComponentWr
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { MakrdownComponent } from './components/MarkdownComponent';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { SlotDirective } from './components/slot';
 import { MainComponent } from './pages/main/main.component';
@@ -24,7 +25,8 @@ import { UnknowComponent } from './pages/unknow/unknow.component';
 		MenubarComponent,
 		MainComponent,
 		UnknowComponent,
-		CustomReactComponentWrapper
+		CustomReactComponentWrapper,
+		MakrdownComponent
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule],
 	providers: [{ provide: APP_CONFIG, useValue: appConfig }],

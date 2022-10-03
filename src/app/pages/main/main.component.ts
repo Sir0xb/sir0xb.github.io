@@ -10,11 +10,16 @@ import { FooterComponent } from './../../components/footer/footer.component';
 @Component({
 	selector: 'app-main',
 	templateUrl: './main.component.html',
-	styleUrls: ['./main.component.scss']
+	styleUrls: [
+		'./main.component.scss',
+		'../../../../node_modules/highlight.js/styles/atom-one-dark.css'
+	]
 })
 export class MainComponent implements OnInit {
 	public component1 = TestReactComponent;
 	public component2 = TestReactComponentNew;
+
+	md = '# Hello Markdown\n```csharp\npublic class Foo {}\n```';
 
 	slots = [
 		new Slot(MenubarComponent, SlotPosition.menuBar),
