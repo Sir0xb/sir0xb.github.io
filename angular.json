@@ -28,7 +28,11 @@
 						"inlineStyleLanguage": "scss",
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": ["src/styles.scss"],
-						"scripts": []
+						"scripts": [],
+						"allowedCommonJsDependencies": [
+							"react-dom/client",
+							"dompurify"
+						]
 					},
 					"configurations": {
 						"production": {

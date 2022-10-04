@@ -7,7 +7,7 @@ import {
 	ViewChild,
 	ViewEncapsulation
 } from '@angular/core';
-import * as React from 'react';
+import React from 'react';
 import { createRoot, Root } from 'react-dom/client';
 
 @Component({

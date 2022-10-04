@@ -7,7 +7,7 @@ $colors: #25272d, #3c3e44, #55565b, #6f7075, #8a8b8f, #a6a7aa, #c3c3c5, #e0e1e2,
 	#ffffff;
 
 @function lighter($deep: 100, $percent: 100) {
-	@return rgba(nth($colors, $deep / 100), $percent);
+	@return rgba(nth($colors, calc($deep / 100)), $percent);
 }
 
 @mixin flexPosition($x: center, $y: center) {

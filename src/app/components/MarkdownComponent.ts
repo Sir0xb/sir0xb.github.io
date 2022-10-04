@@ -5,7 +5,7 @@ import {
 	ViewEncapsulation
 } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import * as DOMPurify from 'dompurify';
+import DOMPurify from 'dompurify';
 import highlightjs from 'highlight.js';
 import { marked, Renderer } from 'marked';
 
