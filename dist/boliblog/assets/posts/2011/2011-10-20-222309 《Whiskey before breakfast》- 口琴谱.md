@@ -1,0 +1,13 @@
+---
+path       : '/mOBtRnFuTuf4uqRzY4rJMPq8'
+title      : "《Whiskey before breakfast》- 口琴谱"
+date       : 2011-10-20 22:23:09 +0800
+comments   : true
+categories : music
+author     : Sir0xb
+tags       : [harmonica, blus]
+---
+
+<img src="/images/2011/2011-10-20-222309.jpg" alt="Whiskey before breakfast" />
+
+***
