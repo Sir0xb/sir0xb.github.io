@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Nearlight · 播客</title>
+<link>https://www.boliball.com/podcasts/</link>
+<description>给心里的声音，留一盏灯。关于感受、关系与普通日子的声音记录。</description>
+<language>zh-cn</language>
+<atom:link href="https://www.boliball.com/podcasts/rss.xml" rel="self" type="application/rss+xml" />
+<itunes:author>Nearlight</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+<itunes:type>episodic</itunes:type>
+<itunes:category text="Society &amp; Culture" />
+<itunes:image href="https://www.boliball.com/brand/podcast-cover.png" />
+<image><url>https://www.boliball.com/brand/podcast-cover.png</url><title>Nearlight · 播客</title><link>https://www.boliball.com/podcasts/</link></image>
+
+
+
+</channel></rss>
